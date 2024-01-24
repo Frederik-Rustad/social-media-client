@@ -44,8 +44,6 @@ describe("login", () => {
 
   it("throws an error when provided with invalid credentials", async () => {
     global.fetch = jest.fn().mockImplementation(() => fetchFailure());
-    await expect(login(invalidEmail, invalidPassword)).rejects.toThrow(
-      "Unsuccessful"
-    );
+    await expect(login(invalidEmail, invalidPassword)).rejects.toThrow("Unsuccessful");
   });
 });
