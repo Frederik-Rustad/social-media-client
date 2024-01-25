@@ -9,6 +9,7 @@ describe("Logout function", () => {
     cy.wait(1000);
     cy.get(".btn-close:visible").click();
     cy.wait(1000);
+    cy.get('[data-auth="login"]').should('be.visible');
     cy.get("button[data-auth='login']:visible").click();
     cy.wait(1500);
     cy.get("input[type='email']:visible")
@@ -22,6 +23,7 @@ describe("Logout function", () => {
     );
     cy.then(() => expect(window.localStorage.getItem("token")).to.not.be.null);
     cy.get("button[data-auth='logout']").click();
+    cy.get('[data-auth="login"]').should('be.visible');
     cy.then(() => expect(window.localStorage.getItem("profile")).to.be.null);
     cy.then(() => expect(window.localStorage.getItem("token")).to.be.null);
   });
