@@ -1,21 +1,22 @@
 import localStorageMock from "./localstorage.mock.js";
-import { remove } from "../../storage/index.js";
+import { logout } from "./logout.js";
+import { save, load } from "../../storage/index.js";
 
 global.localStorage = localStorageMock;
 
 describe("remove", () => {
-  const tokenKey = "token";
-  const tokenValue = ["a2BhR7LpXq9sT3wF8zY0vN1c"];
+  const token_Key = "token";
+  const token_Value = ["a2BhR7LpXq9sT3wF8zY0vN1c"];
 
   beforeEach(() => {
     localStorageMock.removeItem.mockClear();
   });
 
-  it("removes a set token from localStorage", () => {
-    localStorageMock.getItem.mockReturnValueOnce(JSON.stringify(tokenValue));
-    expect(localStorageMock.getItem(tokenKey)).toEqual(JSON.stringify(tokenValue));
-    remove(tokenKey);
-    expect(localStorageMock.removeItem).toHaveBeenCalledWith(tokenKey);
-    expect(localStorageMock.getItem(tokenKey)).toBeUndefined();
-  });
+  it("removes the set token from localStorage", () => {
+    save(token_Key, token_Value);
+    expect(load(token_Key)).toEqual(token_Value);
+    expect(localStorageMock.getItem(token_Key)).toEqual(JSON.stringify(token_Value));
+    logout();
+    expect(localStorage.getItem(token_Key)).toBeNull();
+   });
 });
