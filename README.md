@@ -6,11 +6,11 @@ In this assignment I was tasked with improving the quality of a package by estab
 
 - **Prettier**: Code formatter that enforces a consistent style.
 - **ESLint**: Used to find and fix problems with the JavaScript code.
-- **Husky**: Using two tools, lint-staged and husky, that will automatically run ESLint and Prettier on all files in the repository.
-- **Jest**: Unit testing to confirm that a single atom of functionality is working.
-- **Cypress**: e2e testing framework that runs in the browser.
+- **Husky**: a Git hook manager designed for JavaScript and Node.js projects, enabling streamlined configuration and execution of custom scripts, such as linting
+- **Jest**: Unit testing to confirm that a function is working correctly.
+- **Cypress**: end-to-end testing framework that runs in the browser.
 
-[![deploystatic to page and deploy to Github Pages](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/static.yml/badge.svg?branch=workflow)](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/static.yml)
+[![deploy static to pages](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/static.yml/badge.svg?branch=workflow)](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/static.yml)
 
 ## Installation and Setup
 
