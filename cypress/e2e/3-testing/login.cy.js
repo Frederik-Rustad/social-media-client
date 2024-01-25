@@ -36,14 +36,12 @@ describe("Login function", () => {
     });
 
     cy.wait(1000);
-    cy.get("#loginModal #loginEmail")
-      .should("exist")
-      .type("thor@noroff.no");
+    cy.get("#loginModal #loginEmail").should("exist").type("thor@noroff.no");
     cy.wait(1000);
-    cy.get("#loginModal #loginPassword").should("exist").type("abcdef");
+    cy.get("#loginModal #loginPassword").should("exist").type("12345");
     cy.wait(1000);
     cy.get("button[type='submit']:visible").click({ multiple: true });
-    cy.wait(2000);
+    cy.wait(5000);
     cy.window().its("localStorage.profile").should("not.exist");
     cy.window().its("localStorage.token").should("not.exist");
   });
