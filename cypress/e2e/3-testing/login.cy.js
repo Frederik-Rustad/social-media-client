@@ -1,4 +1,4 @@
-describe("login function", () => {
+describe("Login function", () => {
 
   it(" should fail with none noroff email", () => {
     cy.visit("index.html");

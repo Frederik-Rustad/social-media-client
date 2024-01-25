@@ -1,4 +1,4 @@
-describe("Logout", () => {
+describe("Logout function", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.clearLocalStorage();
