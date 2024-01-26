@@ -12,6 +12,8 @@ In this assignment I was tasked with improving the quality of a package by estab
 
 [![deploy static to pages](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/static.yml/badge.svg?branch=workflow)](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/static.yml)
 
+[![Code review](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/gpt.yml/badge.svg?branch=workflow)](https://github.com/Frederik-Rustad/social-media-client/actions/workflows/gpt.yml)
+
 ## Installation and Setup
 
 Clone the repository and install dependencies:
